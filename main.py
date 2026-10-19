@@ -1,7 +1,7 @@
 import logging
 from textual.app import App, ComposeResult
 from textual.containers import  Center, Vertical
-from textual.widgets import Buttom, Footer, Header, Static
+from textual.widgets import Button, Footer, Header, Static
 from screens.register import RegisterScreen
 from logs.logging_setup import setup_logging
 
@@ -12,7 +12,7 @@ log_store = logging.getLogger(__name__)
 class ProbataBank(App):
 	TITLE = "PróbataBank"
 	SUBTITLE = "by Onix"
-	ENABLE_COMMAND_PALETTE = False,
+	ENABLE_COMMAND_PALETTE = False
 	CSS = """
 	Screen {
 	align: center-middle;
@@ -40,8 +40,8 @@ class ProbataBank(App):
 	def compose(self) -> ComposeResult:
 		yield Header()
 		with Center():
-			with Vertical(id=menu):
-				yield Static("PróbataBank by Onix", id=intro)
+			with Vertical(id="menu"):
+				yield Static("PróbataBank by Onix", id="intro")
 				yield Button("Acessar", id="login", variant="primary")
 				yield Button("Criar conta", id="register")
 				yield Button("Sair", id="exit", variant="error")
