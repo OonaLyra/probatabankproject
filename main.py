@@ -15,7 +15,7 @@ class ProbataBank(App):
 	ENABLE_COMMAND_PALETTE = False
 	CSS = """
 	Screen {
-	align: center-middle;
+	align: center middle;
 	}
 	#menu {
 	width: 44;
@@ -55,11 +55,11 @@ class ProbataBank(App):
 			self.exit()
 
 if __name__ == "__main__":
-	logger.info("Iniciando Próbatabank")
+	log_store.info("Iniciando Próbatabank")
 	try:
 		ProbataBank().run()
 	except Exception:
-		logger.exception("Erro fatal na execução da aplicação")
+		log_store.exception("Erro fatal na execução da aplicação")
 		raise
 	finally:
-		logger.info("Encerrando Próbatabank")
+		log_store.info("Encerrando Próbatabank")
