@@ -1,4 +1,3 @@
 .lyraenv/
-logs/__pycache__
-screens/__pycache__
 __pycache__/
+logs/logs/
